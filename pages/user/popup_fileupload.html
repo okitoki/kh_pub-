@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:description" content="">
+	<title>알림(팝업) :: 경희대학교-캠퍼스타운 </title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/webfonts.css" >
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/layout.js"></script>
+
+	<script>
+		$(function() {
+			popOpen('popupAlarm');
+		});
+	</script>
+
+</head>
+
+<body id="main">
+	<header class="header">
+		<!-- 헤더영역 -->
+	</header>
+
+	<section>
+		<!-- 메인영역 -->
+	</section>
+
+	<!-- 알림팝업 -->
+	<div id="popupAlarm" class="pop_wrap_alarm small">
+		<i class="align_maker"></i>
+		<div class="popup_w558_default">
+			<article class="pop_inner">
+				<div class="pop_header">
+					<div class="cont_wrap_sb">
+					<h1 class="pop_title">파일 업로드</h1>
+					<button type="button" class="btnLine_dark pop_close">
+						<span class="txt_s12">닫기</span>
+					</button>
+				    </div>
+					<hr class="mt20"/>
+				</div>
+				<div class="pop_content">
+					<p class="txt_s14 mb10">첨부파일</p>
+					<div class="cont_wrap_sb">
+						<div class="inp_bgGreyh50 w270">
+							<input type="text" id="name" class="inp_noLine" name="user_name" placeholder="png, gif, jpt, bmp, pdf.......">
+						</div>
+						<button type="button" class="btn_primaryh50 w100">
+							<span class="txt_s14cWhiteFB">업로드</span>
+						</button>
+						<button type="button" class="btnLine_cBlueh50 w100">
+							<span class="txt_s14cWhiteFB">취소</span>
+						</button>
+					</div>
+					<p class="txt_s14cRed mt20">※ 숫자 또는 영문자로 저장된 파일만 전송 가능합니다.</p>
+				</div>
+			</article>
+		</div>
+		<i class="dim"></i>
+	</div>
+	<!-- //알림팝업 -->
+</body>
+	
+</html> 

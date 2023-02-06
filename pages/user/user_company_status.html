@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:description" content="">
+	
+	<title>경희대학교-캠퍼스타운</title>
+	<link rel="stylesheet" type="text/css" href="../../css/webfonts.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/select2.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/layout.js"></script>
+	<script src="../../js/select2.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("[class^='select2']").select2({
+					minimumResultsForSearch: Infinity
+				});				
+		})
+	</script>
+</head>
+<body>
+
+		<!-- 헤더영역 -->
+		<header class="header">
+			<div class="h_inner">
+				<div class="logo_area">
+					<div class="logo">
+						<a href="http://">
+							<img src="../../images/common/kh_logo.png" alt="경희대학교 캠퍼스 타운" />
+						</a>
+					</div>
+				</div>
+				<!-- 사업단 관리자용 페이지인 경우 -->
+				<!-- <div class="user_info_area">
+					<i class="icon_security"></i> <span class="pl10">사업단 관리자 전용페이지입니다</span>
+				</div> -->
+				<div class="btn_area">
+					<button type="button"><i class="icon_slack"></i></button>
+					<button type="button" ><i class="icon_user"></i></button>
+					<!-- 사용자 프로필이 텍스트인 경우 -->
+					<!-- <span class="user_txt">사업단</span> -->
+					<!-- 사용자 프로필이 로고인 경우 -->
+					<!-- <span class="user_logo"><img src="../../images/common/user_logo.png" alt="사업단"></span> -->
+					<button type="button"><i class="icon_notification"></i></button>
+				</div>
+			</div>
+		</header>
+
+		<!--   메인영역 -->
+		<section class="sub_area_dark" >
+                <article class="content_area">
+                    <section class="content_title">
+                            <h1>기업현황</h1>
+                            <span class="txt_s14_cRed">※기업현황의 모든 항목은 필수기재사항입니다.</span>
+                    </section>
+    
+                    <hr class="grey10"/>
+                    <hr class="mt3 mb30"/>
+    
+                    <section class="content_item">
+                        <div class="form_lists mb40">
+                            <ul class="input_group_h">
+                                <li>
+                                    <p class="txt_s16 mb10">입주센터</p>
+                                    <select class="select2_h40_w200">
+                                        <option value="">선택하세요</option>
+                                        <option value="">삼의원창업센터</option>
+                                        <option value="" selected>홍릉바이오의료창업센터</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="txt_s16 mb10">입주호실</p>
+                                    <select class="select2_h50_w100">
+                                        <option value="">선택하세요</option>
+                                        <option value="">506</option>
+                                        <option value="" selected>507</option>
+                                        <option value="">508</option>
+                                        <option value="">509</option>
+                                        <option value="">510</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="txt_s16 mb10">기수구분</p>
+                                    <select class="select2_h50_w100">
+                                        <option value="">선택하세요</option>
+                                        <option value="">4기</option>
+                                        <option value="" selected>캠퍼 1기</option>
+                                        <option value="">캠퍼 2기</option>
+                                        <option value="">캠퍼 3기</option>
+                                        <option value="">캠퍼 4기</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="txt_s16 mb10">기업(팀)명</p>
+                                    <div class="inp_bgGreyh50 w200">
+                                        <input type="text" id="name" class="inp_noLine w200" name="user_name" placeholder="" value="아무랩스">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="txt_s16 mb10">캠퍼스타운입주일</p>
+                                    <div class="inp_bgGreyh50 w150">
+                                        <input type="text" id="name" class="inp_noLine w130" name="user_name" placeholder="YYYY-MM-DD" value="">
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="input_group_h mt30">
+                                <li>
+                                    <p class="txt_s16 mb10">지원분야</p>
+                                    <select class="select2_h40_w100">
+                                        <option value="">선택하세요</option>
+                                        <option value="">분야1</option>
+                                        <option value="" selected>분야2</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="txt_s16 mb10">모집단위</p>
+                                    <select class="select2_h50_w200">
+                                        <option value="" selected>선택하세요</option>
+                                        <option value="">모집단위1</option>
+                                        <option value="">모집단위2</option>
+                                        <option value="">모집단위3</option>
+                                        <option value="">모집단위4</option>
+                                        <option value="">모집단위5</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="txt_s16 mb10">창업구분</p>
+                                    <select class="select2_h50_w200">
+                                        <option value="" selected>선택하세요</option>
+                                        <option value="">창업구분1</option>
+                                        <option value="">창업구분2</option>
+                                        <option value="">창업구분3</option>
+                                        <option value="">창업구분4</option>
+                                        <option value="">창업구분5</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">뷰티/4차산업/소셜벤처(중복선택가능)</p>
+                            <ul class="formGroup_chk">
+                                <li>
+                                    <label class="inp_chk" for="slct_1">
+                                        <input type="checkbox" id="slct_1">
+                                        <i class="icon_chk"></i>
+                                        <span class="txt_s16">뷰터</span>									
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="inp_chk" for="slct_2">
+                                        <input type="checkbox" id="slct_2">
+                                        <i class="icon_chk"></i>
+                                        <span class="txt_s16">4차산업</span>									
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="inp_chk" for="slct_3">
+                                        <input type="checkbox" id="slct_3">
+                                        <i class="icon_chk"></i>
+                                        <span class="txt_s16">소셜벤처</span>									
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">사업명</p>
+                            <div class="inp_bgGreyh50 w800">
+                                <input type="text" id="name" class="inp_noLine w800" name="user_name" placeholder="예_AI 의료플랫폼 기반 심부전환자 진단 및 관리시스템">
+                            </div>
+                        </div>
+                        <div class="form_lists mb40">
+                            <ul class="input_group_h">
+                                <li>
+                                    <p class="txt_s16 mb10">사업자형태</p>
+                                    <select class="select2_h40_w200">
+                                        <option value="">선택하세요</option>
+                                        <option value="">개인사업자</option>
+                                        <option value="" selected>법인사업자</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="txt_s16 mb10">사업자등록번호</p>
+                                    <div class="inp_bgGreyh50 w200">
+                                        <input type="text" id="name" class="inp_noLine w200" name="user_name" placeholder="법인 or 개인사업자등록번호">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="txt_s16 mb10">업종(품목)</p>
+                                    <div class="inp_bgGreyh50 w400">
+                                        <input type="text" id="name" class="inp_noLine w400" name="user_name" placeholder="※사업자등록증 상 업종과 업태 모두 기재">
+                                    </div>
+    
+                            </li>
+                            <li>
+                                    <p class="txt_s16 mb10">설립일(사업자등록일)</p>
+                                    <div class="inp_bgGreyh50 w200">
+                                        <input type="text" id="name" class="inp_noLine" name="user_name" placeholder="YYYY-MM-DD">
+                                    </div>
+                            </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">본점 주소(필수 아님)</p>
+                            <div class="inp_bgGreyh50 w600">
+                                <input type="text" id="name" class="inp_noLine w600" name="user_name" placeholder="※사업자등록증 또는 법인등기부등본 기준 등록된 전체 주소 기재">
+                            </div>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">지점 주소(필수 아님)</p>
+                            <div class="inp_bgGreyh50 w200">
+                                <input type="text" id="name" class="inp_noLine" name="user_name" placeholder="법인의 지점 주소 입력">
+                            </div>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">연구소 주소(필수 아님)</p>
+                            <div class="inp_bgGreyh50 w600">
+                                <input type="text" id="name" class="inp_noLine w600" name="user_name" placeholder="연구소가 있는 경우 연구소 주소 입력">
+                            </div>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">대표자명</p>
+                            <div class="inp_bgGreyh50 w200">
+                                <input type="text" id="name" class="inp_noLine" name="user_name" placeholder="대표자명">
+                            </div>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">성별</p>
+                            <select class="select2_h40_w200">
+                            <option value="">선택하세요</option>
+                            <option value="">남</option>
+                            <option value="" selected>여</option>
+                            </select>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">생년월일</p>
+                            <div class="inp_bgGreyh50 w200">
+                                <input type="text" id="name" class="inp_noLine" name="user_name" placeholder="YYYY-MM-DD">
+                            </div>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">연락처</p>
+                            <div class="inp_bgGreyh50 w200">
+                                <input type="text" id="name" class="inp_noLine" name="user_name" placeholder="000-0000-0000">
+                            </div>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                                <ul class="input_group_h">
+                                    <li>
+                                        <p class="txt_s16 mb10">이메일</p>
+                                        <div class="inp_bgGreyh50 w400">
+                                            <!-- 입력값이 유효한 경우 correct 추가 -->
+                                            <input type="text" id="name" class="inp_noLine w400 correct" name="user_name" placeholder="이메일">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="txt_s16 mb10">슬랙용 이메일</p>
+                                        <div class="inp_bgGreyh50 w400">
+                                            <!-- 입력값이 유효하지 않은 경우 wrong 추가 -->
+                                            <input type="text" id="name" class="inp_noLine w400 wrong" name="user_name" placeholder="슬랙용 이메일">
+                                        </div>
+                                    </li>
+                                </ul>
+                        </div>
+                         
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">홈페이지</p>
+                            <div class="inp_bgGreyh50 w400">
+                                <input type="text" id="name" class="inp_noLine w400" name="user_name" placeholder="홈페이지가 있는 경우에 작성">
+                            </div>
+                        </div>
+
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">교원/외국인 여부 </p>
+                            <ul class="formGroup_radio">
+                                <li>
+                                    <label class="inp_radio">
+                                        <input type="radio" name="ask9">
+                                        <i class="icon_radio"></i>
+                                        <span class="txt_s16 mb10">교원</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="inp_radio">
+                                        <input type="radio" name="ask9">
+                                        <i class="icon_radio"></i>
+                                        <span class="txt_s16 mb10">외국인</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="inp_radio">
+                                        <input type="radio" name="ask9">
+                                        <i class="icon_radio"></i>
+                                        <span class="txt_s16 mb10">해당사항없음 </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+    
+                    </section>
+    
+                    <hr />
+                    <hr class="mt3 mb30"/>
+    
+                    <section class="content_item">
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">아이템 명</p>
+                            <div class="inp_bgGreyh50 w400">
+                                <input type="text" id="name" class="inp_noLine w400" name="user_name" placeholder="예_무료 IT 지식-교육 콘텐츠 큐레이션 플랫폼">
+                            </div>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">아이템 구분</p>
+                            <select class="select2_h40_w300">
+                            <option value="">제품 또는 서비스 또는 융복합아이템</option>
+                            <option value="">제품</option>
+                            <option value="">서비스</option>
+                            <option value="">융복합아이템</option>
+                            </select>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">아이템 설명</p>
+                            <textarea id="name" class="w800" name="user_name" rows="2" cols="500" placeholder="- (아이템구현단계) 아이템구체화 또는 팀빌딩 또는 시제품제작 또는 상용화 또는 판로개척단계
+- 웹 디자인 공급자(디자이너)와 웹 디자인 수요자(고객) 간 디자인 거래를 중개하는 웹·앱서비스"></textarea>
+                        </div>
+    
+<div class="form_lists mb40">
+                            <p class="txt_s16 mb10">아이템 경로</p>
+                            <textarea id="name" class="w800" name="user_name" rows="3" cols="500" 
+                            placeholder="- 웹 사이트 : “www.ㅇㅇ디자인거래중개.kr”로 접속
+- 구글플레이 : “ㅇㅇ디자인거래중개”로 검색
+- 앱스토어 : “ㅇㅇ디자인거래중개”로 검색"></textarea>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">아이템 특징</p>
+                            <textarea id="name" class="w800" name="user_name" rows="3" cols="500" 
+                            placeholder="- (가격경쟁력) 디자인 거래 수수료 5%로 업계 최저 수준
+- (높은만족도) 디자인 거래 시 분쟁이 빈번히 발생하는 원본(ai 등)파일의 소유권과 관련하여, 당사는 원본 소유권을 구매자에게 귀속하는 것을 원칙으로 함 "></textarea>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">아이템 구축사항</p>
+                            <textarea id="name" class="w800" name="user_name" rows="2" cols="500" 
+                            placeholder="- 당사 대표자는 2010년부터 2013년까지 ㅇㅇㅇ디자인거래중개 카페운영(중개 노하우 보유)
+- 디자인업계 프리랜서 1만 명의 데이터(가입자) 보유 중 "></textarea>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">아이템 실적사항</p>
+                            <textarea id="name" class="w800" name="user_name" rows="3" cols="500" 
+                            placeholder="- 웹 사이트 일 평균 방문자 1만명(’20.1월~12월 기준) 
+- 구글플레이 다운로드 수 누적 10만명(’20.7월~12월 기준)
+- 앱스토어 다운로드 수 누적 2만명(’20.10월~12월 기준)"></textarea>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">입주기업설명</p>
+                            <textarea id="name" class="w800" name="user_name" rows="4" cols="500" 
+                            placeholder="- 당사는 총 3명으로, 대표1명, 개발자1명, 디자이너1명으로 팀을 구성하여 2020년 설립
+- 대표자는 ㅇㅇㅇ거래중개 업체에서 10년 종사
+- 거래중개 비즈니스 모델 특허를 출원(국내)중
+- 벤처기업 인증, 이노비즈 인증, 창업기업확인(중기부)"></textarea>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">기업로고</p>
+                            <!-- 이미지 사이즈 130 x 76 -->
+                            <img src="../../images/common/user_logo.png" class="w130"/>
+                            <div class="btn_wrap_left">
+                                <button type="button" class="btnLine_dark mr10">
+                                    <span class="txt_s12">이미지 업로드/수정</span>
+                                </button>
+                                <button type="button" class="btnLine_dark">
+                                    <span class="txt_s12">삭제</span>
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div class="form_lists mb40">
+                            <p class="txt_s16 mb10">기업대표이미지</p>
+                            <ul class="formGroup_radio">
+                                <li>
+                                    <!-- 이미지 사이즈 500 x 500 -->
+                                    <img src="../../images/thumbnail/sample_500_1.png" class="w500">
+                                    <div class="btn_wrap_right">
+                                        <button type="button" class="btnLine_dark">
+                                            <span class="txt_s12">삭제</span>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../images/thumbnail/sample_500_2.png" class="w500">
+                                    <div class="btn_wrap_right">
+                                        <button type="button" class="btnLine_dark">
+                                            <span class="txt_s12">삭제</span>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li>
+                                </li>
+                            </ul>
+                            <button type="button" class="btnLine_dark mt10">
+                                <span class="txt_s12">이미지 추가</span>
+                            </button>
+                        </div>
+                    </section>
+                    <hr class="mt30"/>
+                    <ul class="toast_area mb70">
+                        <li class="mr30">
+                            <button type="button" class="btn_primaryh50">
+                                <span class="txt_s14cWhiteFB">저장/수정</span>
+                            </button>
+                            <!-- toast pop :: 완료되었을 경우 토스트 팝업-->
+                            <!-- <div id="toastcnt">
+                                <p class="txt_s14">저장되었습니다.</p>
+                            </div> -->
+                            <!-- toast pop :: 입력 누락되었을 경우 토스트 팝업-->
+                            <div id="toastcnt">
+                                <p class="txt_s14 warning">누락된 입력이 있습니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="btnLine_cBlueh50">
+                                <span class="txt_s14cBlueFB">취소</span>
+                            </button>
+                        </li>
+                    </ul>
+                </article>
+		</section>
+        <!-- go top button -->
+        <div id="bt_go_top"><button type="button"><i class="icon_top"></i></button></div>
+</body>
+</html>

@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:description" content="">
+	
+	<title>경희대학교-캠퍼스타운</title>
+	<link rel="stylesheet" type="text/css" href="../../css/webfonts.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/select2.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/fullcalendar.css" />
+
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/layout.js"></script>
+	<script src="../../js/select2.min.js"></script>
+    <script src='../../js/fullcalendar/index.global.min.js'></script>	
+	<script>
+
+		$(document).ready(function(){
+			$("[class^='select2']").select2({
+					minimumResultsForSearch: Infinity
+				});
+                
+		})
+// 버튼 클릭 시 컨텐츠 숨김 펼쳐짐
+        $(document).ready(function(){
+                var btn1 = $('.b_s1');
+                btn1.on('click',function(){
+                    if($(this).hasClass('show')) {
+                        $(this).children('i').removeClass('icon_btup').addClass('icon_btdown');
+                        $(this).removeClass('show');
+                        $('.s1_cont').hide();
+                    } else {
+                        $(this).children('i').removeClass('icon_btdown').addClass('icon_btup');
+                        $(this).addClass('show');
+                        $('.s1_cont').show();
+                    }
+                });	
+
+                var btn2 = $('.b_s2');
+                btn2.on('click',function(){
+                    if($(this).hasClass('show')) {
+                        $(this).children('i').removeClass('icon_btup').addClass('icon_btdown');
+                        $(this).removeClass('show');
+                        $('.s2_cont').hide();
+                    } else {
+                        $(this).children('i').removeClass('icon_btdown').addClass('icon_btup');
+                        $(this).addClass('show');
+                        $('.s2_cont').show();
+                    }
+                });	
+
+                var btn3 = $('.b_s3');
+                btn3.on('click',function(){
+                    if($(this).hasClass('show')) {
+                        $(this).children('i').removeClass('icon_btup').addClass('icon_btdown');
+                        $(this).removeClass('show');
+                        $('.s3_cont').hide();
+                    } else {
+                        $(this).children('i').removeClass('icon_btdown').addClass('icon_btup');
+                        $(this).addClass('show');
+                        $('.s3_cont').show();
+                    }
+                });	
+		})
+	</script>
+    	
+       <!--  fullcalendear setting-->
+    <script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  var calendarEl = document.getElementById('calendar');             // full-calendar 생성하기
+                    var calendar = new FullCalendar.Calendar(calendarEl, {
+                        height: '300px', // calendar 높이 설정
+                        expandRows: true, // 화면에 맞게 높이 재설정
+                        slotMinTime: '08:00', // Day 캘린더에서 시작 시간
+                        slotMaxTime: '20:00', // Day 캘린더에서 종료 시간
+                        // 해더에 표시할 툴바
+                        headerToolbar: {
+                        left: '',
+                        center: 'prev title next',
+                        right: ''
+                        },
+                        initialView: 'dayGridMonth', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
+                        initialDate: '2023-02-02', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
+                        navLinks: false, // 날짜를 선택하면 Day 캘린더나 Week 캘린더로 링크
+                        editable: true, // 수정 가능?
+                        selectable: true, // 달력 일자 드래그 설정가능
+                        nowIndicator: true, // 현재 시간 마크
+                        dayMaxEvents: true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
+                        locale: 'ko', // 한국어 설정
+                        eventAdd: function(obj) { // 이벤트가 추가되면 발생하는 이벤트
+                        console.log(obj);
+                        },
+                        eventChange: function(obj) { // 이벤트가 수정되면 발생하는 이벤트
+                        console.log(obj);
+                        },
+                        eventRemove: function(obj){ // 이벤트가 삭제되면 발생하는 이벤트
+                        console.log(obj);
+                        },
+                        select: function(arg) { // 캘린더에서 드래그로 이벤트를 생성할 수 있다.
+                        var title = prompt('Event Title:');
+                        if (title) {
+                            calendar.addEvent({
+                            title: title,
+                            start: arg.start,
+                            end: arg.end,
+                            allDay: arg.allDay
+                            })
+                        }
+                        calendar.unselect()
+                        },
+                        // 이벤트 
+                        events: [
+                        {
+                            title: 'All Day Event',
+                            start: '2023-02-01',
+                        },
+                        {
+                            title: 'Long Event',
+                            start: '2021-07-07',
+                            end: '2021-07-10'
+                        },
+                        {
+                            groupId: 999,
+                            title: 'Repeating Event',
+                            start: '2021-07-09T16:00:00'
+                        },
+                        {
+                            groupId: 999,
+                            title: 'Repeating Event',
+                            start: '2021-07-16T16:00:00'
+                        },
+                        {
+                            title: 'Conference',
+                            start: '2021-07-11',
+                            end: '2021-07-13'
+                        },
+                        {
+                            title: 'Meeting',
+                            start: '2021-07-12T10:30:00',
+                            end: '2021-07-12T12:30:00'
+                        },
+                        {
+                            title: 'Lunch',
+                            start: '2021-07-12T12:00:00'
+                        },
+                        {
+                            title: 'Meeting',
+                            start: '2021-07-12T14:30:00'
+                        },
+                        {
+                            title: 'Happy Hour',
+                            start: '2021-07-12T17:30:00'
+                        },
+                        {
+                            title: 'Dinner',
+                            start: '2021-07-12T20:00:00'
+                        },
+                        {
+                            title: 'Birthday Party',
+                            start: '2021-07-13T07:00:00'
+                        },
+                        {
+                            title: 'Click for Google',
+                            url: 'http://google.com/', // 클릭시 해당 url로 이동
+                            start: '2021-07-28'
+                        }
+                        ]
+                    });
+
+	  calendar.render();
+	});
+
+    </script>
+</head>
+<body>
+
+		<!-- 헤더영역 -->
+		<header class="header">
+			<div class="h_inner">
+				<div class="logo_area">
+					<div class="logo">
+						<a href="http://">
+							<img src="../../images/common/kh_logo.png" alt="경희대학교 캠퍼스 타운" />
+						</a>
+					</div>
+				</div>
+				<!-- 사업단 관리자용 페이지인 경우 -->
+				<!-- <div class="user_info_area">
+					<i class="icon_security"></i> <span class="pl10">사업단 관리자 전용페이지입니다</span>
+				</div> -->
+				<div class="btn_area">
+					<button type="button"><i class="icon_slack"></i></button>
+					<button type="button" ><i class="icon_user"></i></button>
+					<!-- 사용자 프로필이 텍스트인 경우 -->
+					<!-- <span class="user_txt">사업단</span> -->
+					<!-- 사용자 프로필이 로고인 경우 -->
+					<!-- <span class="user_logo"><img src="../../images/common/user_logo.png" alt="사업단"></span> -->
+					<button type="button"><i class="icon_notification"></i></button>
+				</div>
+			</div>
+		</header>
+
+		<!--   메인영역 -->
+		<section class="sub_area_dark">
+                <article class="content_area">
+
+                    <section class="content_title">
+                            <h1>장소 및 장비 예약</h1>
+                            <button type="button" class="btnLine_dark pop_close">
+								<span class="txt_s12">예약캘린더 보기</span>
+							</button>
+                    </section>
+    
+                    <hr class="mt10"/>
+                    <hr class="mt3 mb30"/>
+                    <div class="content_item_wrap">
+                        <section class="content_item w754">
+                            <section class="item">
+                                <p class="nomal_table_tl txtb">공간대여목록</p>
+                                <span class="txt_s14_cRed">※아래의 공간을 선택하여 장비및 시간을 예약하세요.</span>
+                                <table class="nomal_table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><span>센터명</span></th>
+                                            <th scope="col"><span>공간명</span></th>
+                                            <th scope="col"><span>층</span></th>
+                                            <th scope="col"><span>대여가능시간대</span></th>
+                                            <th scope="col"><span>비고</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span>삼의원창업센터</span></td>
+                                            <td><span>누리터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>평일/주말 09:00~20:00</span></td>
+                                            <td><span></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>가온실(회의실)</span></td>
+                                            <td><span>1층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>가온실(회의실)</span></td>
+                                            <td><span>2층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용</span></td>
+                                        </tr>
+                                        <tr class="on">
+                                            <td><span></span></td>
+                                            <td><span>가온실(회의실)</span></td>
+                                            <td><span>3층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>가온실(회의실)</span></td>
+                                            <td><span>4층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>가온실(회의실)</span></td>
+                                            <td><span>5층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>방송스튜디오</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용, 사전협의필요</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>방송스튜디오</span></td>
+                                            <td><span>2층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용, 장비교육 이수 및 영상 시청</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>포토스튜디오</span></td>
+                                            <td><span>2층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용, 장비교육 이수 및 영상 시청</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><span>홍릉창업센터</span></td>
+                                            <td><span>청년식탐</span></td>
+                                            <td><span>1층</span></td>
+                                            <td><span>평일/주말 15:00~24:00</span></td>
+                                            <td><span>예약전용</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>방송스튜디오</span></td>
+                                            <td><span>2층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td><span>예약전용</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>회의실</span></td>
+                                            <td><span>3층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>회의실</span></td>
+                                            <td><span>4층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span>회의실</span></td>
+                                            <td><span>5층</span></td>
+                                            <td><span>평일/주말 09:00~24:00</span></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                            <section class="item mt50">
+                                <table class="html_list">
+                                    <caption class="tl">예약한 리스트</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><span>NO</span></th>
+                                            <th scope="col"><span>성명</span></th>
+                                            <th scope="col"><span>역할(직책)</span></th>
+                                            <th scope="col"><span>담당업무</span></th>
+                                            <th scope="col"><span>사용(예약)날짜</span></th>
+                                            <th scope="col"><span>생년월일</span></th>
+                                            <th scope="col"><span>편집/삭제</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원 창업센터 창업센터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원창</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의센터</span></td>
+                                            <td><span>지하</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원창업센터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="on">
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원창업센터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원창업센터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원창업센터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원창업센터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원창업센터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>00</span></td>
+                                            <td><span>홍길동</span></td>
+                                            <td><span>삼의원창업센터</span></td>
+                                            <td><span>지하/로비</span></td>
+                                            <td><span>2023.00.00(요일)</span></td> 
+                                            <td><span>10:00 ~ 15:00</span></td>
+                                            <td><span class="cont_wrap_c">
+                                                <button type="button"><i class="icon_write_b"></i></button>
+                                                <button type="button"><i class="icon_trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>       
+                                    </tbody>
+                                </table>
+                            </section>
+                        </section>
+
+                        <section  class="content_item w320">
+                            <div class="title_wrap">
+                                <div class="title_inner_wrap">
+                                    <i class="icon_cube-outline"></i>
+                                    <h1>대여 장비</h1>
+                                </div>
+                                <button class="b_s1 show"><i class="icon_btup"></i></button>
+                            </div>
+                            <hr class="mt10" />
+                            <div class="s1_cont show">
+								<dl class="formGroup_chk2 nl">
+									<dd>
+										<label class="inp_chk" for="slct_1">
+											<input type="checkbox" id="slct_1">
+											<i class="icon_chk"></i>
+											<span class="txt_s14">장비물품1</span>									
+										</label>
+									</dd>
+									<dd>
+										<label class="inp_chk" for="slct_2">
+											<input type="checkbox" id="slct_2">
+											<i class="icon_chk"></i>
+											<span class="txt_s14">물품2</span>									
+										</label>
+									</dd>
+									<dd>
+										<label class="inp_chk" for="slct_3">
+											<input type="checkbox" id="slct_3">
+											<i class="icon_chk"></i>
+											<span class="txt_s14">물품3</span>									
+										</label>
+									</dd>
+									<dd>
+										<label class="inp_chk" for="slct_4">
+											<input type="checkbox" id="slct_4">
+											<i class="icon_chk"></i>
+											<span class="txt_s14">물품555</span>									
+										</label>
+									</dd>
+									<li class="chk_radio">
+										<label class="inp_chk" for="slct_5">
+											<input type="checkbox" id="slct_5">
+											<i class="icon_chk"></i>
+											<span class="txt_s14">물품777</span>									
+										</label>
+									</dd>  
+								</dl> 
+                                <hr class="mt20" />
+                            </div>   
+                                <div class="title_wrap pt20">
+                                    <div class="title_inner_wrap">
+                                        <i class="icon_calendar-text"></i>
+                                        <h1>날짜 선택</h1>
+                                    </div>
+                                    <button class="b_s2 show"><i class="icon_btup"></i></button>
+                                </div>
+                                <hr class="mt10" />  
+                                <!-- FullCalendar -->
+                                <div id="calendar" class="cal_area mt20 s2_cont">
+
+                                </div>
+                                <div class="title_wrap">
+                                    <div class="title_inner_wrap mt20">
+                                        <i class="icon_clock"></i>
+                                        <h1>시간 선택</h1>
+                                    </div>
+                                    <button class="b_s3 show"><i class="icon_btup"></i></button>
+                                </div>
+                                <hr class="mt10" />  
+                                <li class="formGroup_chk2 time_hr_group s3_cont">
+                                    <dt>오전</dt>
+									<dd>
+										<a href="#" class="pos"><span>10:00</span></a>
+                                        <a href="#" class="impos"><span>10:00</span></a>
+										<a href="#" class="pos"><span>10:00</span></a>
+                                        <a href="#" class="pos"><span>10:00</span></a>
+									</dd>
+                                    <dt class="t_alignCenter">오후</dt>
+									<dd>
+										<a href="#" class="pos"><span>10:00</span></a>
+                                        <a href="#" class="impos"><span>10:00</span></a>
+										<a href="#" class="impos"><span>10:00</span></a>
+                                        <a href="#" class="impos"><span>10:00</span></a>
+                                        <a href="#" class="pos"><span>10:00</span></a>
+                                        <a href="#" class="pos"><span>10:00</span></a>
+										<a href="#" class="pos"><span>10:00</span></a>
+                                        <a href="#" class="pos"><span>10:00</span></a>
+									</dd>
+
+								</dl>
+                                <div class="time_infocont_wrap_r">
+                                    <i class="icon_blank_sq_g"></i><span class="txt_s12 pr10">선택</span>
+                                    <i class="icon_blank_sq_gr"></i><span class="txt_s12">불가</span>
+                                </div>
+
+                                <ul class="toast_area mb70">
+                                    <li class="mr30">
+                                        <button type="button" class="btnLine_cBlue_h50_pl20_pr20_mr20_w300_mt30 btn_toast">
+                                            <i class="icon_calendar"></i>
+                                            <span class="s14_cBlueFB pl10">예약</span>
+                                        </button>
+                                        <!-- toast pop :: 완료되었을 경우 토스트 팝업-->
+                                        <div id="toastcnt">
+                                            <p class="txt_s14">정상적으로 신청되었습니다..</p>
+                                        </div>
+                                        <!-- toast pop :: 입력 누락되었을 경우 토스트 팝업-->
+                                        <!-- <div id="toastcnt">
+                                            <p class="txt_s14 warning"><em class="cDRed">웰컴키트</em>가 정상적으로 신청되었습니다..</p>
+                                        </div> -->
+                                    </li>
+                                </ul>
+
+                        </section>
+                    </div>
+
+                   
+                </article>
+		</section>
+         <!-- go top button -->
+         <div id="bt_go_top"><button type="button"><i class="icon_top"></i></button></div>
+</body>
+</html>

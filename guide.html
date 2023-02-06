@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge;Chromeframe=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="johyeonji">
+	<meta name="generator" content="">
+	<meta name="robots" content="ALL">
+	<meta property="og:type" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<title>퍼블리싱 가이드</title>
+
+	<style>
+		*{margin:0; padding:0; word-wrap:keep-all;}
+		html, body {height:100%; overflow:hidden;}
+		body {font-family:"맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; line-height:1.6; font-weight:normal;}
+		ul, ol, li {list-style:none;}
+		table, th, td {border-collapse:collapse;}
+		a {text-decoration:none;}
+		a:hover {text-decoration:underline;}
+
+		[class^="title_"] {color:#333; font-weight:bold;}
+		[class^="txt_"] {font-size:12px; color:#888;}
+		[class^="link_"] {font-size:12px; color:#3C89F9;}
+		.title_main {display:block; font-size:24px; color:#fff; text-align:center;}
+		.title_sub {display:block; padding:5px; font-size:16px;}
+
+		#wrap {width:100%; height:100%;}
+			.header {position:relative; overflow:hidden; padding:10px; min-width:100%; background-color:#4969f0; box-sizing:border-box;}
+				.version {position:absolute; right:10px; top:10px; text-align:right; opacity:0.8;}
+					.version [class^="txt_"] {display:inline-block; position:relative; padding:0 10px; color:#fff; vertical-align:middle;}
+					.version [class^="txt_"] + [class^="txt_"]:before {display:inline-block; content:''; position:absolute; left:0; top:50%; margin-top:-5px; width:1px; height:10px; background-color:rgba(255,255,255,0.3);}
+
+					.gnb_w {display:block; position:relative; margin-top:10px; padding:10px 0 0 0; text-align:center; letter-spacing:-5px; }
+						.gnb_w:before {display:block; content:''; position:absolute; left:0; top:0; width:100%; height:1px; background-color:#fff; opacity:0.2;}
+						.gnb_lists_w {display:inline-block; letter-spacing:0; white-space:nowrap;}
+							.gnb_list {display:inline-block; position:relative; padding:0 10px 0 12px; vertical-align:top;}
+								.gnb_list + .gnb_list:before {display:inline-block; overflow:hidden; content:''; position:absolute; left:0; top:50%; margin-top:-5px; width:1px; height:10px; background-color:rgba(255,255,255,0.3);}
+									.gnb_menu {display:block; font-size:12px; color:#fff; opacity:0.8;}
+									.gnb_menu.active {color:papayawhip; font-weight:bold; opacity:1;}
+
+			.contents {padding:10px 10px 10px 10px; width:100%; height:calc(100% - 109px); box-sizing:border-box; overflow:auto; }
+				.contents:after {display:block; content:''; width:100%; height:150px;}
+				.sec {position:relative; padding-top:10px; margin-top:20px;}
+				.sec + .sec {margin-top:0; margin-top:50px;}
+					.status_w {position:absolute; right:5px; top:0;}
+						.status_w [class^="txt_"] {margin-left:5px; vertical-align:middle;}
+						.txt_ing {color:#009944;}
+						.txt_complete {color:#333;}
+						.txt_delay {color:#ec6941;}
+
+					.status_grap_w {width:100%;}
+						.grap_w {position:relative; overflow:hidden; width:100%; height:10px; background-color:#ddd;}
+							.stick {display:inline-block; position:absolute; left:0; top:0; height:10px; background-color:rgba(73, 105, 240, 0.7);}
+				
+
+		.html_list {min-width:1420px; width:100%; border-top:2px solid #4b4b4b;}
+			.html_list th, .html_list td {padding:5px 10px; border:1px solid #e8e8e8; text-align:center; white-space:nowrap;}
+			.html_list th {color:#333; font-weight:bold;}
+				.html_list th .title_th {font-weight:bold;}
+			.html_list thead th {background-color:#fafafa; }
+			.html_list tbody th, .html_list tbody td {text-align:left; white-space:normal;}
+			.html_list tbody th .title_th {font-weight:normal;}
+			.html_list tbody td.ta_center, .html_list tbody td:nth-child(6) {text-align:center;}
+			.html_list tbody tr.cut_line th, .html_list tbody tr.cut_line td {border-top:2px solid #dadada;}
+				.html_list .txt_info, .html_list .title_th, .html_list .link, .html_list .layout {display:inline-block; font-size:12px;}
+				.html_list .txt_info {color:#888;}
+				.html_list .link, .html_list .layout {color:#3C89F9;}
+			
+			.html_list tbody tr:hover th, .html_list tbody tr:hover td {background-color:rgba(73, 105, 240, 0.05);}
+			.html_list tbody tr.on th, .html_list tbody tr.on td {background-color:rgba(73, 105, 240, 0.05);}
+			.html_list tbody tr.on td .view_discription .txt_info {color:#888;}
+			
+			.html_list tbody tr.cancel th .title_th, .html_list tbody tr.cancel td .txt_info, .html_list tbody tr.cancel td .link {color:#ccc; text-decoration:line-through;}
+			.html_list tbody tr.cancel .vd_layer .txt_info {color:#888; text-decoration:none;}
+
+			.html_list tbody td .msg_info {font-size:11px; color:#3C89F9;}
+			.html_list tbody td .msg_info.red {color:#ed1c24;}
+
+		.view_discription {display:none; position:relative; }
+				.view_discription input[type="checkbox"] {position:absolute; left:0; top:0; opacity:0;}
+				.btn_view {display:inline-block; height:20px; padding:0 15px; line-height:21px; border:1px solid #e6e6e6; background-color:#f8f8f8; border-radius:5px; cursor:pointer;}
+					.btn_view:before {content:'보기'; font-size:11px; color:#898989; vertical-align:text-top;}
+				.vd_layer_w {display:none; position:relative; }
+					.vd_layer {display:inline-block; position:absolute; right:0px; top:3px; margin-bottom:60px; padding:3px 15px 7px; min-width:100%; background-color:#fff; border:1px solid #dbdbdb; text-align:left; box-sizing:border-box; white-space:nowrap;}
+						.vd_layer .txt_info {font-size:11px;}
+				.view_discription input[type="checkbox"]:checked + .btn_view {border-color:#dbdbdb;}
+				.view_discription input[type="checkbox"]:checked + .btn_view:before {display:inline-block; content:'닫기';}
+				.view_discription input[type="checkbox"]:checked ~ .vd_layer_w {display:block; z-index:1;}
+
+		@media only screen and (orientation: landscape) {
+			.gnb_w {width:100%; }
+				.gnb_lists_w {width:100%; overflow-x:auto; overflow-y:hidden;}
+		}
+	</style>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+
+	<script>
+		$(function(){
+			
+			$('.link').each(function(){
+				var linkUrl = $(this).attr('href');
+				if (linkUrl == "#none")
+				{
+					$(this).addClass('ready').attr('target', '_self');
+				}
+				else if (linkUrl != "#none")
+				{
+					$(this).addClass('complate');
+				}
+
+				$(this).click(function(){
+					if (linkUrl == "#none")
+					{
+						if ($(this).parent().parent().hasClass('cancel'))
+						{
+							alert('취소된 페이지입니다.');
+						}
+						else
+						{
+							alert('페이지가 없습니다.');
+						}
+					}
+					else if ($(this).parent().parent().hasClass('cancel'))
+					{
+						alert('취소된 페이지입니다.');
+					}
+				});
+			});
+
+			$('.vd_layer').each(function(){
+				var txtLength = $(this).find('.txt_info').text().length;
+						 
+				if (txtLength > 0)
+				{
+					$(this).parent().parent().show();
+				}
+				
+			});
+
+			$('.gnb_menu').click(function(){
+				
+				$('.gnb_lists_w .gnb_menu').removeClass('active');
+				$(this).addClass('active');
+				
+			});
+
+			
+			$('.view_discription .btn_view').click(function(){
+				
+				if ($(this).parent().parent().parent().hasClass('on'))
+				{
+					$(this).parent().parent().parent().removeClass('on');
+				}
+				else
+				{
+					$('html_list .view_discription').parent().parent().removeClass('on');
+					$(this).parent().parent().parent().addClass('on');
+				}
+			});
+
+			//responeUI();
+
+			$(window).on({
+				'load resize': function(){
+					responeUI();
+				}
+			});
+
+
+		var totalLink = $('body .link').length, 
+			complate = $('body .complate').length, 
+			noneFile = $('body .layout').length,
+			cancel = $('body .cancel').length,
+			totalReady = totalLink - cancel - noneFile,
+			stCalc = (complate-noneFile)/(totalLink-cancel) * 100,
+			stResult = stCalc.toFixed(1);
+
+			console.log(totalLink);
+
+			$('.sec .stg').each(function(){
+				if (stResult >= 100.0)
+				{
+					$(this).text( Math.ceil(stResult)-1 + '%');
+				}
+				else {
+					$(this).text(stResult + '%');
+				}
+			});
+
+			$('.grap_w .stick').each(function(){
+				if (stResult >= 100.0)
+				{
+					$(this).animate({'width' : Math.ceil(stResult)-1 + '%'},1000);
+				}
+				else {
+					$(this).animate({'width' : stResult + '%'},1000);
+				}
+			});
+		});
+	</script>
+
+ </head>
+ <body>
+
+ 	<div id="wrap">
+		
+		<header class="header">
+			<h1 class="title_main">경희대학교 캠퍼스타운 퍼블리싱 가이드</h1>
+			<p class="version">
+				<span class="txt_ver">ver : 1.0</span>
+			</p>
+
+			<div class="gnb_w">
+				<ul class="gnb_lists_w">
+					<li class="gnb_list">
+						<a href="#elements" class="gnb_menu">Elements</a>
+					</li>
+					<li class="gnb_list">
+						<a href="#pages" class="gnb_menu">Pages</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="contents">
+			<!-- <section class="sec">
+				<h2 class="title_sub">전체 진행율 : <span class="stg"></span></h2>
+				<div class="status_grap_w">
+					<div class="grap_w">
+						<i class="stick"></i>
+					</div>
+				</div>
+			</section> -->
+			<section id="elements" class="sec">
+				<h2 class="title_sub">Elements</h2>
+				<div class="status_w">
+					<span class="txt_ing">진행중</span>
+					<span class="txt_complete">완료</span>
+					<span class="txt_delay">보류</span>
+				</div>
+				<table class="html_list">
+					<thead>
+						<tr>
+							<th scope="col">
+								<span class="title_th">구분</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">디렉토리</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">파일명</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">진행상태</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">등록일</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">업데이트 날짜/내용</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">
+								<span class="title_th">헤더</span>
+							</th>
+							<td>
+								<span class="txt_info">pages/layout</span>
+							</td>
+							<td>
+								<a href="./pages/layout/header.html" class="layout" target="_blank">header.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete"></span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info"></span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<div class="txt_info"></div>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr class="cancel">
+							<th scope="row">
+								<span class="title_th">footer</span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="#" class="layout" target="_blank">-</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete"></span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info"></span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<div class="txt_info"></div>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+								
+					</tbody>
+				</table>
+			</section>
+			<section id="pages" class="sec">
+				<h2 class="title_sub">Pages</h2>
+				<div class="status_w">
+					<span class="txt_ing">진행중</span>
+					<span class="txt_complete">완료</span>
+					<span class="txt_delay">보류</span>
+				</div>
+				<table class="html_list pg">
+					<thead>
+						<tr>
+							<th scope="col">
+								<span class="title_th">1depth</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">2depth</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">3depth</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">4depth</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">디렉토리</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">화면ID(html)</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">진행상태</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">등록일</span>
+							</th>
+							<th scope="col">
+								<span class="title_th">업데이트 날짜/내용</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">
+								<span class="title_th">로그인</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info">pages/login</span>
+							</td>
+							<td>
+								<a href="pages/login/login.html" class="link" target="_blank">login.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">패스워드 재설정 step01</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/login/password_step1.html" class="link" target="_blank">password_step1.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">패스워드 재설정 step02</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/login/password_step2.html" class="link" target="_blank">password_step2.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">회원가입 step01</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/login/join_form1.html" class="link" target="_blank">join_form1.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">회원가입 step02</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/login/join_form2.html" class="link" target="_blank">join_form2.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">회원가입 step03</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/login/join_form3.html" class="link" target="_blank">join_form3.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr id="main" class="cut_line">
+							<th scope="row">
+								<span class="title_th">메인</span>
+							</th>
+							<th scope="row">
+								<span class="title_th">로그인 전</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info">pages/main</span>
+							</td>
+							<td>
+								<a href="index.html" class="link" target="_blank">index.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<!-- ****************************************************************************************************** -->
+						<tr id="main" class="cut_line">
+							<th scope="row">
+								<span class="title_th">입주기업(User)</span>
+							</th>
+							<th scope="row">
+								<span class="title_th">로그인 후 메인</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info">pages/user</span>
+							</td>
+							<td>
+								<a href="pages/user/user_main.html" class="link" target="_blank">user_main.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">기업현황(입력폼)</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/user_company_status.html" class="link" target="_blank">user_company_status.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">파일업로드 팝업</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/popup_fileupload.html" class="link" target="_blank">popup_fileupload.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">파일삭제 팝업</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/popup_filedelete.html" class="link" target="_blank">popup_filedelete.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">입주인원정보</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/user_userinfo.html" class="link" target="_blank">user_userinfo.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">인원추가 정보입력/수정</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/user_userinfo_input.html" class="link" target="_blank">user_userinfo_input.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">출입카드 사용현황(입주기업)</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/popup_enter_card.html" class="link" target="_blank">popup_enter_card.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">퇴사보고(입주사)</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/popup_deceased.html" class="link" target="_blank">popup_deceased.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">성과(상세내용)</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/user_detail_info.html" class="link" target="_blank">user_detail_info.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.06</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">성과(상세내용)</span>
+							</th>
+							<th scope="row">
+								<span class="title_th">(팝엄)지원사업[기타]</span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/popup_support_business.html" class="link" target="_blank">popup_support_business.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">장비장소예약</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/eq_place_reservation.html" class="link" target="_blank">eq_place_reservation.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">장비장소예약확인(달력)</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/user_cal.html" class="link" target="_blank">user_cal.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">물품지급현황</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/user/goods_payment_status.html" class="link" target="_blank">goods_payment_status.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+	
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+	
+								</label>
+							</td>
+						</tr>
+						<!-- ********************************************************************************************************* -->
+						<tr id="main" class="cut_line">
+							<th scope="row">
+								<span class="title_th">사업단(Admin)</span>
+							</th>
+							<th scope="row">
+								<span class="title_th">로그인 후 메인</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info">pages/admin</span>
+							</td>
+							<td>
+								<a href="pages/admin/admin_main.html" class="link" target="_blank">admin_main.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">완료</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.03</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th">기업현황</span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="pages/admin/admin_dash_board.html" class="link" target="_blank">admin_dash_board.html</a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">진행중</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.06</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<th scope="row">
+								<span class="title_th"></span>
+							</th>
+							<td>
+								<span class="txt_info"></span>
+							</td>
+							<td>
+								<a href="" class="link" target="_blank"></a>
+							</td>
+							<td class="ta_center">
+								<span class="txt_complete">사업단 컨펌 후 진행</span>
+							</td>
+							<td class="ta_center">
+								<span class="txt_info">2023.02.06</span>
+							</td>
+							<td class="ta_center">
+								<label class="view_discription">
+									<input type="checkbox">
+									<span class="btn_view"></span>
+
+									<div class="vd_layer_w">
+										<div class="vd_layer">
+											<!-- 업데이트 내용 -->
+											<span class="txt_info"></span>
+											<!--// 업데이트 내용 -->
+										</div>
+									</div>
+
+								</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</div>
+	</div>
+ </body>
+</html>

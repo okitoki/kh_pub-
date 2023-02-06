@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:description" content="">
+	<title>알림(팝업) :: 경희대학교-캠퍼스타운 </title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/webfonts.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/select2.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/layout.js"></script>
+	<script src="../../js/select2.min.js"></script>
+
+
+	<script>
+		$(document).ready(function(){
+			$("[class^='select2']").select2({
+					minimumResultsForSearch: Infinity
+				});				
+		})
+
+		$(function() {
+			popOpen('popupAlarm');
+		});
+	</script>
+
+</head>
+
+<body id="main">
+	<header class="header">
+		<!-- 헤더영역 -->
+	</header>
+
+	<section>
+		<!-- 메인영역 -->
+	</section>
+
+	<!-- 알림팝업 -->
+	<div id="popupAlarm" class="pop_wrap_alarm">
+		<i class="align_maker"></i>
+		<div class="popup_w1220_default">
+			<article class="pop_inner">
+				<div class="pop_header">
+					<div class="cont_wrap_sb">
+					<h1 class="pop_title">퇴사 보고(입주사)</h1>
+						<div class="cont_wrap_sb_i">
+							<p class="txt_s14 cDRed mr10">※필요한 안내문구자리입니다.</p>
+							<button type="button" class="btnLine_dark pop_close">
+								<span class="txt_s12">닫기</span>
+							</button>
+						</div>
+					
+				    </div>
+					<hr class="mt20"/>
+				</div>
+				<div class="pop_content">
+					<ul class="cont_basic_txt_info mb30 ">
+						<li>
+							<span class="txt_s14">건물</span>
+							<span class="txt_s16_cBlue">삼의원창업센터</span>
+						</li>
+						<li>
+							<span class="txt_s14">팀명</span>
+							<span class="txt_s16_cBlue">아무랩스(506호)</span>
+						</li>
+					</ul>
+					<ul class="cont_wrap_sb pt20_pl20_pb20_pr20 mb50 bgColorGrey">
+						<li>
+							<select class="select2_h40_w200">
+                                <option value="">이름</option>
+                                <option value="">홍길동1</option>
+                                <option value="">홍길동2</option>
+                            </select>
+						</li>
+						<li>
+							<select class="select2_h40_w200">
+                                <option value="">출입카드 반납여부</option>
+                                <option value="">반납</option>
+                                <option value="">인계</option>
+                            </select>
+						</li>
+						<li>
+							<select class="select2_h40_w200">
+                                <option value="">인계대상</option>
+                                <option value="">내용1</option>
+                                <option value="">내용2</option>
+                            </select>
+						</li>
+						<li>
+							<div class="inp_bgGreyh50 w200">
+                                <input type="text" id="name" class="inp_noLine" name="user_name" placeholder="날짜(YYYY-MM-DD)">
+                            </div>
+						</li>
+						<li>
+							<div class="inp_bgGreyh50 w200">
+                                <input type="text" id="name" class="inp_noLine" name="user_name" placeholder="비고">
+                            </div>
+						</li>
+					</ul>
+					<p class="txt_s16_pt10_pl20_pb10_pr20_mb30 bgColorGrey">삼의원창업센터의 아무랩스 소속 <em class="cBlue">[홍길동]</em>은 [YYYYMMDD]날짜로 퇴사함으로 출입카드를 <em class="cBlue">[반납]</em>합니다.</p>
+                    
+					<p class="txt_s16_pt10_pl20_pb10_pr20 bgColorGrey">삼의원창업센터의 아무랩스 소속 <em class="cBlue">[홍길동]</em>은 <em class="cBlue">[YYYYMMDD]</em>날짜로 퇴사함으로 출입카드를 <em class="cBlue">[인계대상]에게 인계</em>합니다.</p>
+						
+				</div>
+				<ul class="toast_area mb70">
+					<li class="mr30">
+						<button type="button" class="btn_primaryh50 w140">
+							<span class="txt_s14cWhiteFB">제출</span>
+						</button>
+						<!-- toast pop :: 완료되었을 경우 토스트 팝업-->
+						<div id="toastcnt">
+							<p class="txt_s14"><em class="cDRed">웰컴키트</em>가 정상적으로 신청되었습니다..</p>
+						</div>
+						<!-- toast pop :: 입력 누락되었을 경우 토스트 팝업-->
+						<!-- <div id="toastcnt">
+							<p class="txt_s14 warning"><em class="cDRed">웰컴키트</em>가 정상적으로 신청되었습니다..</p>
+						</div> -->
+					</li>
+					<li>
+						<button type="button" class="btnLine_cBlueh50 w140">
+							<span class="txt_s14cBlueFB">취소</span>
+						</button>
+					</li>
+				</ul>
+			</article>
+			
+		</div>
+		<i class="dim"></i>
+	</div>
+	<!-- //알림팝업 -->
+</body>
+	
+</html> 

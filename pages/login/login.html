@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:description" content="">
+	<title>로그인 :: 경희대학교 캠퍼스타운</title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/webfonts.css" >
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/layout.js"></script>
+</head>
+
+<body class="bgLGreen">
+	<section class="login_wrap">
+		<div class="login_inner">
+			<article class="login_content">
+				<div class="lg_tit">
+					<h4 class="tit_s19">로그인</h4>
+				</div>
+				<ul class="input_group">
+					<li>
+						<label for="email" class="txt_s16">ID</label>
+          				<input type="text" id="email" class="txt_s16 correct" name="user_email"> <!-- 입력값이 유효한 경우 correct 추가 -->
+					</li>
+					<li>
+						<label for="password" class="txt_s16">Password</label>
+          				<input type="password" id="password" class="txt_s16 wrong" name="user_password"> <!-- 입력값이 유효하지 않은 경우 wrong 추가 -->
+					</li>
+				</ul>
+				<div class="toast_area">
+					<button type="button" class="btn_primaryh50">
+						<span class="txt_s14cWhiteFB">로그인</span>
+					</button>
+					<!-- toast pop :: 이메일주소 또는 패스워드가 유효하지 않은 경우 노출되는 토스트 팝업-->
+					<div id="toastcnt">
+						<p class="txt_s14">잘못된 패스워드입니다.</p>
+					</div>
+					<!-- // toast pop-->
+				</div>
+
+				<div class="login_btn_wrap">
+					<button type="button" class="btnLine_dark">
+						<span class="txt_s12">회원가입</span>
+					</button>
+					<button type="button" class="btnLine_dark">
+						<span class="txt_s12">패스워드 재설정</span>
+					</button>
+				</div>
+			</article>
+		</div>
+	</section>
+</body>
+	
+</html> 

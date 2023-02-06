@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:description" content="">
+	
+	<title>경희대학교-캠퍼스타운</title>
+	<link rel="stylesheet" type="text/css" href="../../css/webfonts.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/select2.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/layout.js"></script>
+	<script src="../../js/select2.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("[class^='select2']").select2({
+					minimumResultsForSearch: Infinity
+				});				
+		})
+	</script>
+</head>
+<body>
+
+		<!-- 헤더영역 -->
+		<header class="header">
+			<div class="h_inner">
+				<div class="logo_area">
+					<div class="logo">
+						<a href="http://">
+							<img src="../../images/common/kh_logo.png" alt="경희대학교 캠퍼스 타운" />
+						</a>
+					</div>
+				</div>
+				<!-- 사업단 관리자용 페이지인 경우 -->
+				<!-- <div class="user_info_area">
+					<i class="icon_security"></i> <span class="pl10">사업단 관리자 전용페이지입니다</span>
+				</div> -->
+				<div class="btn_area">
+					<button type="button"><i class="icon_slack"></i></button>
+					<button type="button" ><i class="icon_user"></i></button>
+					<!-- 사용자 프로필이 텍스트인 경우 -->
+					<!-- <span class="user_txt">사업단</span> -->
+					<!-- 사용자 프로필이 로고인 경우 -->
+					<!-- <span class="user_logo"><img src="../../images/common/user_logo.png" alt="사업단"></span> -->
+					<button type="button"><i class="icon_notification"></i></button>
+				</div>
+			</div>
+		</header>
+
+		<!--   메인영역 -->
+		<section class="sub_area_dark" >
+      <article class="content_area">
+              <section class="content_title">
+                      <h1>인원추가 정보입력 / 수정</h1>
+                      <span class="txt_s14_cRed">※필요한 안내문구자리입니다.</span>
+              </section>
+
+              <hr class="mt10"/>
+              <hr class="mt3 mb30"/>
+              <div class="content_item_wrap">
+                  <section  class="content_item w400">
+                          <div class="cont_basic_info_wrap">
+                              <dl class="cont_basic">
+                                <dt>
+                                  기본정보
+                                </dt>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="홍길동" />
+                                  </div>
+                              </dd>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="역할(직책)" />
+                                  </div>
+                                </dd>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="담당업무" />
+                                  </div>
+                                </dd>
+                                <dd>
+                                  <select class="select2_h40_w200">
+                                      <option value="">선택하세요</option>
+                                      <option value="">비상근</option>
+                                      <option value="" selected>상근</option>
+                                  </select>
+                                </dd>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="YYYY-MM-DD" />
+                                  </div>
+                                </dd>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="성별" />
+                                  </div>
+                                </dd>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="연락처" />
+                                  </div>
+                                </dd>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="이메일 주소" />
+                                  </div>
+                                </dd>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="슬랙에서 사용할 이메일" />
+                                  </div>
+                                </dd>
+                                <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="입사일(YYYY-MM_DD)" />
+                                  </div>
+                                </dd>
+                                <dd>
+                                      <select class="select2_h40_w200">
+                                          <option value="">선택하세요</option>
+                                          <option value="">고용</option>
+                                          <option value="" selected>비고용</option>
+                                      </select>
+
+                                </dd>
+                                <dd>
+                                      <select class="select2_h40_w200">
+                                          <option value="">선택하세요</option>
+                                          <option value="">4대보험 비제공</option>
+                                          <option value="" selected>4대보험 제공</option>
+                                      </select>
+                                </dd>
+                              </dl>
+                          </div>
+                  </section>
+                  <section  class="content_item w200">
+
+                          <div class="cont_basic_info_wrap">
+                              <dl class="cont_basic">
+                                <dt>
+                                  웰컴키트
+                                </dt>
+                                <dd>
+                                  <select class="select2_h40_w130">
+                                      <option value="">선택하세요</option>
+                                      <option value="">신청함</option>
+                                      <option value="" selected>신청안함</option>
+                                  </select>
+                              </dd>
+                                <dd>
+                                  <select class="select2_h40_w130">
+                                      <option value="">선택하세요</option>
+                                      <option value="">신청함</option>
+                                      <option value="" selected>신청안함</option>
+                                  </select>
+                                </dd>
+                                <dd>
+                                  <select class="select2_h40_w130">
+                                      <option value="">선택하세요</option>
+                                      <option value="">M</option>
+                                      <option value="" selected>L</option>
+                                      <option value="">XL</option>
+                                      <option value="">2XL</option>
+                                      <option value="">3XL</option>
+                                  </select>
+                                </dd>
+                                <dd>
+                                  <select class="select2_h40_w130">
+                                      <option value="">선택하세요</option>
+                                      <option value="">머그컵 1</option>
+                                      <option value="" selected>머그컵 2</option>
+                                  </select>
+                                </dd>
+                                <dd>
+                                  <button type="button" class="btnLine_cBlue_h50_pr10_pl10">
+                                      <span class="s14_cBlueFB">관리자에게 신청하기</span>
+                                  </button>
+                                </dd>
+                      </div>
+                  </section>
+                  <section  class="content_item w400">
+
+                      <div class="cont_basic_info_wrap">
+                          <dl class="cont_basic">
+                            <dt>
+                              경희대 구성원 여부
+                            </dt>
+                            <dd>
+                              <select class="select2_h40_w130">
+                                  <option value="">선택하세요</option>
+                                  <option value="">해당여부1</option>
+                                  <option value="" selected>해당여부2</option>
+                              </select>
+                              </dd>
+                              <dd>
+                                  <select class="select2_h40_w130">
+                                      <option value="">선택하세요</option>
+                                      <option value="">구성원 구분</option>
+                                      <option value="" selected>소속(학부, 학과)</option>
+                                  </select>
+                              </dd>
+                              <dd>
+                                  <div class="inp_bgGreyh50 w200">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w200" name="user_name"  value="소속(학부, 학과)" />
+                                  </div>
+                              </dd>
+                              <dd>
+                                  <div class="inp_bgGreyh50 w300">
+                                      <input type="text" id="name" class="inp_noLine dGreyTxt w300" name="user_name"  value="학번(학부재학생경우는 전체학번)" />
+                                  </div>
+                              </dd>
+                              <dd>
+                                  <p class="txt_s14 mb10">※ 구성원인 경우 <em class="cBlue">증명서 사본</em> 제출</p>
+                                  <div class="btn_wrap">
+                                      <button type="button" class="btnLine_dark">
+                                          <span class="txt_s12">업로드</span>
+                                      </button>
+                                  </div>
+                              </dd>
+                          </dl>
+                      </div>
+                  </section>
+              </div>
+                <ul class="toast_area mb70">
+                  <li class="mr30">
+                      <button type="button" class="btn_primaryh50">
+                          <span class="txt_s14cWhiteFB">저장 / 수정</span>
+                      </button>
+                      <!-- toast pop :: 완료되었을 경우 토스트 팝업-->
+                      <div id="toastcnt">
+                          <p class="txt_s14"><em class="cDRed">웰컴키트</em>가 정상적으로 신청되었습니다..</p>
+                      </div>
+                      <!-- toast pop :: 입력 누락되었을 경우 토스트 팝업-->
+                      <!-- <div id="toastcnt">
+                          <p class="txt_s14 warning"><em class="cDRed">웰컴키트</em>가 정상적으로 신청되었습니다..</p>
+                      </div> -->
+                  </li>
+                  <li>
+                      <button type="button" class="btnLine_cBlueh50">
+                          <span class="txt_s14cBlueFB">취소</span>
+                      </button>
+                  </li>
+              </ul>
+        </article>
+		</section>
+
+</body>
+</html>

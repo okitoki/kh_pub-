@@ -1,0 +1,62 @@
+/* 일요일 날짜 빨간색 */
+.fc-day-sun a {
+    color: red;
+    text-decoration: none;
+  }
+  
+  /* 토요일 날짜 파란색 */
+  .fc-day-sat a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  .fc-button-primary {
+      background-color: rgb(255, 255, 255) !important;
+      border-color: rgb(255, 255, 255) !important;
+      color: rgb(18, 18, 18) !important;
+  }
+
+  .fc-daygrid-day-number {
+    font-size: 14px;
+  }
+
+  .fc-icon {
+
+    border: solid 1px #e4e4e4 !important;
+  }
+
+  .fc-toolbar-chunk {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .fc-toolbar-title {
+    font-size: 24px !important;
+    font-weight: 500 !important;
+  }
+
+
+
+
+
+/* 큰 태블릿 */
+@media screen and (min-width:1024px) and (max-width:1480px) {
+
+}
+
+
+@media screen and (min-width:1366px) and (max-width:1480px) {    
+
+}
+
+/* 태블릿 */
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+}
+
+/* 모바일 */
+@media screen and (min-width:100px) and (max-width:767px) {
+
+
+}

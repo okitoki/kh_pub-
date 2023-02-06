@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:description" content="">
+	
+	<title>경희대학교-캠퍼스타운</title>
+	<link rel="stylesheet" type="text/css" href="../../css/webfonts.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/select2.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/layout.js"></script>
+	<script src="../../js/select2.min.js"></script>
+    <script src='../../js/fullcalendar/index.global.min.js'></script>	
+	<script>
+		$(document).ready(function(){
+			$("[class^='select2']").select2({
+					minimumResultsForSearch: Infinity
+				});				
+		})
+	</script>
+    	
+        <!--  fullcalendear setting-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              var calendarEl = document.getElementById('calendar');
+
+              // full-calendar 생성하기
+                    var calendar = new FullCalendar.Calendar(calendarEl, {
+                        height: '400px', // calendar 높이 설정
+                        expandRows: true, // 화면에 맞게 높이 재설정
+                        slotMinTime: '08:00', // Day 캘린더에서 시작 시간
+                        slotMaxTime: '20:00', // Day 캘린더에서 종료 시간
+                        // 해더에 표시할 툴바
+                        headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        // right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                        right: ''
+                        },
+                        initialView: 'dayGridMonth', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
+                        // initialDate: '2021-07-15', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
+                        navLinks: true, // 날짜를 선택하면 Day 캘린더나 Week 캘린더로 링크
+                        editable: true, // 수정 가능?
+                        selectable: true, // 달력 일자 드래그 설정가능
+                        nowIndicator: true, // 현재 시간 마크
+                        dayMaxEvents: true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
+                        locale: 'ko', // 한국어 설정
+                        eventAdd: function(obj) { // 이벤트가 추가되면 발생하는 이벤트
+                        console.log(obj);
+                        },
+                        eventChange: function(obj) { // 이벤트가 수정되면 발생하는 이벤트
+                        console.log(obj);
+                        },
+                        eventRemove: function(obj){ // 이벤트가 삭제되면 발생하는 이벤트
+                        console.log(obj);
+                        },
+                        select: function(arg) { // 캘린더에서 드래그로 이벤트를 생성할 수 있다.
+                        var title = prompt('Event Title:');
+                        if (title) {
+                            calendar.addEvent({
+                            title: title,
+                            start: arg.start,
+                            end: arg.end,
+                            allDay: arg.allDay
+                            })
+                        }
+                        calendar.unselect()
+                        },
+                        // 이벤트 
+                        events: [
+                        {
+                            title: 'All Day Event',
+                            start: '2021-07-01',
+                        },
+                        {
+                            title: 'Long Event',
+                            start: '2021-07-07',
+                            end: '2021-07-10'
+                        },
+                        {
+                            groupId: 999,
+                            title: 'Repeating Event',
+                            start: '2021-07-09T16:00:00'
+                        },
+                        {
+                            groupId: 999,
+                            title: 'Repeating Event',
+                            start: '2021-07-16T16:00:00'
+                        },
+                        {
+                            title: 'Conference',
+                            start: '2021-07-11',
+                            end: '2021-07-13'
+                        },
+                        {
+                            title: 'Meeting',
+                            start: '2021-07-12T10:30:00',
+                            end: '2021-07-12T12:30:00'
+                        },
+                        {
+                            title: 'Lunch',
+                            start: '2021-07-12T12:00:00'
+                        },
+                        {
+                            title: 'Meeting',
+                            start: '2021-07-12T14:30:00'
+                        },
+                        {
+                            title: 'Happy Hour',
+                            start: '2021-07-12T17:30:00'
+                        },
+                        {
+                            title: 'Dinner',
+                            start: '2021-07-12T20:00:00'
+                        },
+                        {
+                            title: 'Birthday Party',
+                            start: '2021-07-13T07:00:00'
+                        },
+                        {
+                            title: 'Click for Google',
+                            url: 'http://google.com/', // 클릭시 해당 url로 이동
+                            start: '2021-07-28'
+                        }
+                        ]
+                    });
+
+                    calendar.render();
+                    });
+        
+          </script>
+</head>
+<body>
+
+		<!-- 헤더영역 -->
+		<header class="header">
+			<div class="h_inner">
+				<div class="logo_area">
+					<div class="logo">
+						<a href="http://">
+							<img src="../../images/common/kh_logo.png" alt="경희대학교 캠퍼스 타운" />
+						</a>
+					</div>
+				</div>
+				<!-- 사업단 관리자용 페이지인 경우 -->
+				<!-- <div class="user_info_area">
+					<i class="icon_security"></i> <span class="pl10">사업단 관리자 전용페이지입니다</span>
+				</div> -->
+				<div class="btn_area">
+					<button type="button"><i class="icon_slack"></i></button>
+					<button type="button" ><i class="icon_user"></i></button>
+					<!-- 사용자 프로필이 텍스트인 경우 -->
+					<!-- <span class="user_txt">사업단</span> -->
+					<!-- 사용자 프로필이 로고인 경우 -->
+					<!-- <span class="user_logo"><img src="../../images/common/user_logo.png" alt="사업단"></span> -->
+					<button type="button"><i class="icon_notification"></i></button>
+				</div>
+			</div>
+		</header>
+
+		<!--   메인영역 -->
+		<section class="sub_area_dark" >
+                <article class="content_area">
+
+                    <section class="content_title">
+                            <h1>물품지급 현황</h1>
+                            <button type="button" class="btnLine_dark pop_close">
+								<span class="txt_s12">수정하기</span>
+							</button>
+                    </section>
+    
+                    <hr class="mt10"/>
+                    <hr class="mt3 mb30"/>
+                    <section class="content_item">
+                        <h2>입주자 정보</h2>
+                        <ul class="cont_basic_txt_info py20 pi10 bgColorLGrey mb30 ">
+                            <li>
+                                <div class="cont_wrap_sb w400">
+                                    <p class="txt_s14 w100">기수구분</p>
+                                    <p class="txt_s16_cBlue w300">캠퍼 3기 (삼의원창업센터)</p>
+                                </div>
+                                <div  class="cont_wrap_sb w400">
+                                    <p class="txt_s14 w100">이메일</p>
+                                    <p class="txt_s16_cBlue w300">emailaddress@email.com</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cont_wrap_sb w400">
+                                    <p class="txt_s14 w100">기업(팀)명</p>
+                                    <p class="txt_s16_cBlue w300">(주)아무랩스</p>
+                                </div>
+                                <div class="cont_wrap_sb w400">
+                                    <p class="txt_s14 w100">입주호실</p>
+                                    <p class="txt_s16_cBlue w300">506호</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cont_wrap_sb w400">
+                                    <p class="txt_s14 w100">대표자</p>
+                                    <p class="txt_s16_cBlue w300">홍길동</p>
+                                </div>
+                                <div class="cont_wrap_sb w400">
+                                    <p class="txt_s14 w100">입주인원</p>
+                                    <p class="txt_s16_cBlue w300">00명</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="txt_s14 w100">연락처</p>
+                                <p class="txt_s16_cBlue w300">000-000-0000</p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="content_item">
+                        <h2 class="mb20">입주비품 목록</h2>
+                        <table class="html_list">
+                            <caption class="tl txtb">사무공간</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><span>NO</span></th>
+                                    <th scope="col"><span>사무공간 비품</span></th>
+                                    <th scope="col"><span>수량</span></th>
+                                    <th scope="col"><span>특이사항</span></th>
+                                    <th scope="col"><span>비고</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                      
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800) 일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 </span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항특이사항 사항 사항 사항특이사항 사항 사항 사항특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용특이사항 사항 사항 사항</span></td>
+                                </tr>                                
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="html_list mt40">
+                            <caption class="tl txtb">세면실 및 화장실</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><span>NO</span></th>
+                                    <th scope="col"><span>사무공간 비품</span></th>
+                                    <th scope="col"><span>수량</span></th>
+                                    <th scope="col"><span>특이사항</span></th>
+                                    <th scope="col"><span>비고</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800)일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                      
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800) 일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800) 일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>    
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800) 일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>    
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800) 일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>    
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800) 일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>    
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>일반형 데스크(1800) 일반형 데스크(1800)</span></td>
+                                    <td><span>00</span></td>
+                                    <td><span>특이사항 사항 사항 사항</span></td>
+                                    <td><span>비고내용 비고내용 비고내용</span></td>
+                                </tr>                                    
+                                   
+                            </tbody>
+                        </table>
+
+                        <table class="html_list mt40">
+                            <caption class="tl txtb">기타</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width:5%"><span>NO</span></th>
+                                    <th scope="col" style="width:30%"><span>항목</span></th>
+                                    <th scope="col" style="width:60%"><span>내용</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>부착물 제거 상태(O,X)</span></td>
+                                    <td><span>O</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>부착물 제거 상태(O,X)</span></td>
+                                    <td><span>O</span></td>
+                                </tr>                                   
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>부착물 제거 상태(O,X)</span></td>
+                                    <td><span>O</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>부착물 제거 상태(O,X)</span></td>
+                                    <td><span>O</span></td>
+                                </tr>                                  <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>부착물 제거 상태(O,X)</span></td>
+                                    <td><span>O</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>부착물 제거 상태(O,X)</span></td>
+                                    <td><span>O</span></td>
+                                </tr>                                  <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>부착물 제거 상태(O,X)</span></td>
+                                    <td><span>O</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>00</span></td>
+                                    <td><span>부착물 제거 상태(O,X)</span></td>
+                                    <td><span>O</span></td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="content_item mt50">
+                        <h2>센터제공시설</h2>
+                        <ul class="icon_info_area">
+                            <li class="cont_wrap_fs_i w270 py10">
+                                <i class="icon_freezon mr20"></i><span class="txt_s16">냉난방</span>
+                            </li>
+                            <li class="cont_wrap_fs_i w270 py10">
+                                <i class="icon_wifi mr20"></i><span class="txt_s16">인터넷시설</span>
+                            </li>
+                            <li class="cont_wrap_fs_i w270 py10">
+                                <i class="icon_shower mr20"></i><span class="txt_s16">샤워실</span>
+                            </li>
+                            <li class="cont_wrap_fs_i w270 py10">
+                                <i class="icon_cup mr20"></i><span class="txt_s16">휴게실, 탕비실, 다용실</span>
+                            </li>
+                            <li class="cont_wrap_fs_i w270 py10">
+                                <i class="icon_elect mr20"></i><span class="txt_s16">전기시설</span>
+                            </li>
+                            <li class="cont_wrap_fs_i w270 py10">
+                                <i class="icon_tower mr20"></i><span class="txt_s16">화장실</span>
+                            </li>
+                            <li class="cont_wrap_fs_i w270 py10">
+                                <i class="icon_arrow10 mr20"></i><span class="txt_s16">On:실, Hwa:실</span>
+                            </li>
+                            <li class="cont_wrap_fs_i w270 py10">
+                                <i class="icon_com_office mr20"></i><span class="txt_s16">공용회의실(가온실, 나온실)</span>
+                            </li>
+                        </ul>
+                        <ol class="decimal ml50 mt30">
+                            <li>
+                                <span>weee입주자 및 관계자 등의 고의 또는 과실로 인하여 센터 시설․장비를 손상하였을 경우에는 입주자가 손해배상 또는 원상복구 하여야 한다.</span>
+                            </li>
+                            <li>
+                                <span>입주자는 졸업 및 퇴거의 경우 계약만료일 및 계약해지일(퇴거일) 이전까지 센터로부터 소유물을 반출하고, 입주실을 입주 당시의 원상으로 회복하여 명도하여야 한다.</span>
+                            </li>
+                            <li>
+                                <span>입주자가 원상회복 의무를 이행하지 아니할 경우 경희대학교 캠퍼스타운 사업단은 입주실을 원상으로 회복하는 작업을 할 수 있다. 이 경우 원상회복에 소요되는 비용은 입주자가 부담하여야 한다.</span>
+                            </li>
+                        </ol>
+                        <p class="txt_s14_cRed mt30 ml30">※지급받은 물품과 다른 경우 담당자에게 연락하시기 바랍니다.</p>
+                        <p class="cont_txt24_et mt50">경희대학교 캠퍼스타운 사업단장 귀하</p>
+                    </section>
+                   
+                </article>
+		</section>
+                <!-- go top button -->
+                <div id="bt_go_top"><button type="button"><i class="icon_top"></i></button></div>
+</body>
+</html>
